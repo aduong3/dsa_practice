@@ -45,3 +45,5 @@ function indexSelectionSort(arr) {
 }
 
 console.log(indexSelectionSort([0, 2, 34, 22, 10, 19, 17]));
+
+// console.log(rewriteSelection([0, 2, 34, 22, 10, 19, 17]));

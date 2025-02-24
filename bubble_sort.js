@@ -40,5 +40,8 @@ function optimizedBubbleSort(arr) {
   return arr;
 }
 
-// console.log(optimizedBubbleSort([8, 104, 27, 4, 7, 10, 1, 2, 3, 15]));
-// console.log(optimizedBubbleSort([8, 1, 2, 3, 4, 5, 7, 6]));
+console.log(optimizedBubbleSort([8, 104, 27, 4, 7, 10, 1, 2, 3, 15]));
+console.log(optimizedBubbleSort([8, 1, 2, 3, 4, 5, 7, 6]));
+
+// console.log(rewriteBubble([8, 104, 27, 4, 7, 10, 1, 2, 3, 15]));
+// console.log(rewriteBubble([8, 1, 2, 3, 4, 5, 7, 6]));
