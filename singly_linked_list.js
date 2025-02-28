@@ -95,6 +95,29 @@ class SinglyLinkedList {
     this.length++;
     return true;
   }
+  remove(index) {
+    if (index < 0 || index >= this.length) return undefined;
+    if (index === this.length - 1) return !!this.pop();
+    if (index === 0) return !!this.shift();
+    let prevNode = this.get(index - 1);
+    let removeNode = prevNode.next;
+    prevNode.next = removeNode.next;
+    this.length--;
+    return removeNode;
+  }
+  reverse() {
+    let node = this.head;
+    [this.head, this.tail] = [this.tail, this.head];
+    let prev = null;
+    let next;
+    for (let i = 0; i < this.length; i++) {
+      next = node.next;
+      node.next = prev;
+      prev = node;
+      node = next;
+    }
+    return this;
+  }
 }
 
 const list = new SinglyLinkedList();
@@ -104,6 +127,4 @@ list.push("HI");
 list.push("BYE");
 
 // console.log(list);
-console.log(list.insert(3, "SEVERANCE"));
-
-console.log(list);
+console.log(list.reverse());
