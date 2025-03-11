@@ -80,7 +80,6 @@ class Graph {
     queue.push(vertex);
     while (queue.length) {
       let removed = queue.shift();
-      console.log(removed);
       result.push(removed);
       visited[removed] = true;
       for (let i = 0; i < this.adjacencyList[removed].length; i++) {
